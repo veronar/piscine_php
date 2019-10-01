@@ -1,0 +1,8 @@
+.git
+.DS_Store
+*.swp
+libft.a
+*.o
+a.out
+.vscode
+._*
