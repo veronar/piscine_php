@@ -1,0 +1,49 @@
+.titlecenter {
+	display: flex;
+	justify-content: center;
+}
+
+.title {
+	width: 1200px;
+	height: 130px;
+	border: 1px solid #909090;
+	border-radius: 15px;
+	background-color: #909090;
+}
+
+.bodycontainer {
+	display: flex;
+	justify-content: space-around;
+	width: 75%;
+	margin: 0 auto;
+}
+
+.bodyside {
+	display: flex;
+	flex-direction: column;
+	border: 1px solid #909090;
+	border-radius: 15px;
+	background-color: #909090;
+	width: 14%;
+	margin: 0 auto;
+	position: relative;
+	margin-bottom: 75px;
+}
+
+.icon {
+	display: flex;
+	margin: 5px auto;
+}
+
+.wall {
+	background-image: url("./resources/brick.jpg");
+	background-repeat: repeat;
+	height: 60px;
+	margin: 0 10px;
+}
+
+.bodyimg {
+	width: 70%;
+	position: relative;
+	margin: 0 20px;
+}
