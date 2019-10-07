@@ -1,12 +1,17 @@
-.titlecenter {
+
+header {
 	display: flex;
-	justify-content: center;
+	background-color: #909090;
+	width: 75%;
+	border-radius: 12px;
+	margin: 0 auto;
+	padding: 10px 0px;
+	position: relative;
 }
 
 .title {
 	width: 1200px;
-	height: 130px;
-	border: 1px solid #909090;
+	height: 120px;
 	border-radius: 15px;
 	background-color: #909090;
 }
@@ -14,8 +19,10 @@
 .bodycontainer {
 	display: flex;
 	justify-content: space-around;
-	width: 75%;
+	width: 70%;
 	margin: 0 auto;
+	padding: 20px 0px;
+	position: relative;
 }
 
 .bodyside {
@@ -26,8 +33,8 @@
 	background-color: #909090;
 	width: 14%;
 	margin: 0 auto;
+	height: 500px;
 	position: relative;
-	margin-bottom: 75px;
 }
 
 .icon {
@@ -35,15 +42,71 @@
 	margin: 5px auto;
 }
 
+.selected {
+	display: flex;
+	margin: 5px auto;
+	border: 3px solid red;
+}
+
 .wall {
 	background-image: url("./resources/brick.jpg");
 	background-repeat: repeat;
 	height: 60px;
-	margin: 0 10px;
+	margin: 0 8px;
 }
 
 .bodyimg {
-	width: 70%;
-	position: relative;
+	width: 75%;
+	height: 600px;
 	margin: 0 20px;
+	border: 8px solid #909090;
+	border-radius: 15px;
+}
+
+.search {
+	position: absolute;
+	right: 30px;
+	padding: 10px;
+}
+
+.refresh {
+	width: 18px;
+	top: 16px;
+	right: 16px;
+	position: absolute;
+}
+
+.delete {
+	width: 18px;
+	right: 16px;
+	top: 105px;
+	position: absolute;
+}
+
+.form {
+	z-index: 1000;
+	padding: 10px 20px 45px;
+	background: #88ff89;
+	display: block;
+	bottom: 30px;
+	left: 180px;
+	font-size: 18px;
+	border-radius: 12px;
+	position: absolute;
+}
+
+.shadow {
+	text-shadow: 2px 4px rgba(255, 0, 0, 0.65);
+}
+
+input[type="text"] {
+	width: 75%;
+}
+
+input[type="submit"] {
+	border-radius: 0 !important;
+}
+
+header, .bodyside, .bodyimg, .form {
+	box-shadow: 5px 10px 8px #000000;
 }

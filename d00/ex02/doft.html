@@ -1,55 +1,65 @@
 <!DOCTYPE html>
 <html>
+	<head>
+		<meta charset="UTF-8" name="viewport" content="width=device-width, inital-scale=1.0">
 
-<head>
+		<link rel="stylesheet" href="doft.css">
 
-	<meta charset="UTF-8" name="viewport"  content="width=device-width, inital-scale=1.0">
-
-	<link rel="stylesheet" href="doft.css">
-
-	<title>
-		Day of the 42
-	</title>
-
-	<div class="titlecenter">
-			<div class="title">
-				<img src="resources/day_of_the_42.png" alt="Day of the 42" height="100px" style="padding: 15px;">
-			</div>
-	</div>
-
-</head>
-
-<body style="background-color: #505050;">
-
-	<p></p>
-
-	<div class="bodycontainer">
-
-		<div class="bodyside">
-			
-			<img class="icon" src="resources/arrow.png" alt="Advance" width="45%">
-			<img class="icon" src="resources/main.png" alt="Take" width="45%"> 
-			<img class="icon" src="resources/oeil.png" alt="Look" width="45%"> 
-			<img class="icon" src="resources/outil.png" alt="Use" width="45%"> 
-			<img class="icon" src="resources/chat-icon.png" alt="Speak" width="45%">
-
-		</div>
-
-		<div class="bodyimg">
-			<img src="resources/cluster.jpg" alt="" width="100%" style="border: 5px solid #909090; border-radius: 10px;">
-		</div>
-
-		<div class="bodyside">
-
-			<img class="icon" src="resources/book.png" alt="" width="45%"> 
-			<img class="icon" src="resources/towel.png" alt="" width="45%"> 
-
-			<div class="wall"></div>
+		<title>
+			Day of the 42
+		</title>
+	</head>
+	
+	<body style="background-color: #505050;">
 		
+		<header>
+			<div class="title">
+				<img src="resources/day_of_the_42.png" alt="Day of the 42" height="100px" style="padding: 10px;">
+				<img class="search" src="resources/loupe.png" alt="Search" height="135px;">
+				<a href="https://www.disney.com"><img class="refresh" src="resources/reload.png" alt="Start from the beginning" ></a>
+				<a href="https://www.relaischateaux.com"><img class="delete" src="resources/close.gif" alt="Disconnect" ></a>
+			</div>
+		</header>
+		
+		<div class="bodycontainer">
+			
+			<div class="bodyside">
+			
+				<img class="icon" src="resources/arrow.png" alt="Advance" width="45%">
+				<img class="icon" src="resources/main.png" alt="Take" width="45%"> 
+				<img class="selected" src="resources/oeil.png" alt="Look" width="45%"> 
+				<img class="icon" src="resources/outil.png" alt="Use" width="45%"> 
+				<img class="icon" src="resources/chat-icon.png" alt="Speak" width="45%">
+	
+			</div>
+
+			<div class="bodyimg">
+				<img src="resources/cluster.jpg" alt="cluster" height="100%" width="100%" usemap="#map">
+				<map name="map" id="map">
+					<area alt="imac" href="http://www.apple.com" shape="rect" coords="290, 340, 430, 585" />
+					<area alt="chair" href="http://www.ikea.com" shape="rect" coords="720, 320, 910, 520" />
+				</map>
+			</div>
+
+			<div class="bodyside">
+
+				<img class="icon" src="resources/book.png" alt="book" width="45%"> 
+				<img class="icon" src="resources/towel.png" alt="towel" width="45%"> 
+	
+				<div class="wall"></div>
+			
+			</div>
+
 		</div>
 
-	</div>
+		<div class="form">
+			Vous <span style="font-size: 25px;">entrez</span> alors dans une grande piece remplie<br>d'<span class="shadow">ordinateurs</span>...<br>
+			<span style="font-style: italic;">- Bonjour, vous êtes nouveau ici ?</span>
+			<form action="#">
+				<input type="text">
+				<input type="submit" value="Repondre">
+			</form>
+		</div>
 
-
-</body>
+	</body>
 </html>
