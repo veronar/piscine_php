@@ -9,6 +9,10 @@ h1{
 	font-size: 3vw;
 }
 
+table {
+	display: flex;
+}
+
 .nonmetal {
 	background-color: lightgrey;
 }
@@ -50,7 +54,7 @@ h1{
 }
 
 .elenum {
-	font-size: 1vw;
+	font-size: 0.8vw;
 }
 
 .elename {
@@ -62,7 +66,7 @@ h1{
 
 .eleweight {
 	text-align: right;
-	font-size: 1vw;
+	font-size: 0.8vw;
 	text-transform: uppercase;
 }
 
