@@ -1,0 +1,75 @@
+.imgs{
+	display: flex;
+	justify-content: center;
+}
+
+h1{
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	text-align: center;
+	font-size: 3vw;
+}
+
+.nonmetal {
+	background-color: lightgrey;
+}
+
+.alkalimetal {
+	background-color: orange;
+}
+
+.alkaliearth {
+	background-color: red;
+}
+
+.transmetal {
+	background-color: yellow;
+}
+
+.metal {
+	background-color: #28B463;
+}
+
+.metalloid {
+	background-color: lightgreen;
+}
+
+.halogen {
+	background-color: turquoise;
+}
+
+.noblegas {
+	background-color: #1b8dff;
+}
+
+.lantha {
+	background-color: #a38bbf;
+}
+
+.actinide {
+	background-color: pink;
+}
+
+.elenum {
+	font-size: 1vw;
+}
+
+.elename {
+	text-align: center;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	font-size: 2vw;
+	font-weight: bold;
+}
+
+.eleweight {
+	text-align: right;
+	font-size: 1vw;
+	text-transform: uppercase;
+}
+
+td {
+	width: 5.5%;
+}
+
+p {
+	font-family: sans-serif;
+}
