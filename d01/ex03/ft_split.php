@@ -1,4 +1,3 @@
-#!/usr/bin/php
 <?php
 function ft_split($str) {
 	$str_array = explode(" ", $str);
