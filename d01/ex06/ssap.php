@@ -9,7 +9,9 @@ function ft_split($str) {
 }
 
 $i = 1;
-
+if (count($argv) <= 1)
+	return;
+	
 while ($i < count($argv)) {
 	$str_arr = ft_split($argv[$i]);
 	if (count($total_arr) > 0) {
