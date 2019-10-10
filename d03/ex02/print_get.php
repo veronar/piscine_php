@@ -1,4 +1,3 @@
-#!/usr/bin/php
 <?php
 if ($_GET)
 {
