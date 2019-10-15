@@ -3,9 +3,7 @@
 
 	function read_data()
 	{
-		if (issset($_POST['login']) && $_POST['login'] != NULL && 
-		isset($_POST['passwd']) && $_POST['passwd'] != NULL &&
-		$_POST['submit'] && $_POST['submit'] === "OK")
+		if (!$_POST['login'] || !$_POST['passwd'] || $_POST['submit'] || !$_POST['submit'] === "OK")
 		{
 			$arr['login'] = $_POST['login'];
 			$arr['passwd'] = hash('whirlpool', $_POST['passwd']);
