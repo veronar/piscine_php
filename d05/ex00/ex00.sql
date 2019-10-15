@@ -1,1 +1,1 @@
-CREATE DATABASE db_vesingh;
+CREATE DATABASE iF NOT EXISTS db_vesingh;
