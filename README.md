@@ -1,4 +1,4 @@
-# **PHP_bootcamp**
+# **Piscine_PHP**
 
 WeThinkCode_ Bootcamp  
 Piscine - PHP
