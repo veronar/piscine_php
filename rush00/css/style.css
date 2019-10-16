@@ -1,0 +1,385 @@
+body {
+	background-color: #f2f2f2;
+	margin: 0;
+	padding: 0;
+	color: #464646;
+	font-family: 'Roboto', sans-serif;
+}
+
+form {
+	border: 3px solid #f2f2f2;
+}
+
+input[type=text], input[type=password], input[type=email] {
+	width: 100%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	outline: none;
+	display: inline-block;
+	border: 1px solid #ddd;
+	box-sizing: border-box;
+}
+
+input[type=number] {
+	width: 50%;
+	outline: none;
+	padding: 12px 20px;
+	margin: 8px 0;
+	border: 1px solid #ddd;
+	box-sizing: border-box;
+}
+
+a {
+	text-decoration: none;
+}
+
+button {
+	background-color: #11C692;
+	color: white;
+	outline: none;
+	padding: 14px 20px;
+	margin: 8px 0;
+	border: none;
+	cursor: pointer;
+	width: 100%;
+}
+
+button:hover {
+	opacity: 0.8;
+}
+
+.topnav {
+	background-color: rgb(56, 56, 56);
+	overflow: hidden;
+}
+
+.topnav a {
+	float: left;
+	color: #ffffff;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-size: 17px;
+}
+
+.topnav a:hover {
+	background-color: #777777;
+	color: #ffffff;
+}
+
+.menu {
+	float: left;
+}
+
+.logpage {
+	float: right;
+}
+
+.container {
+	padding: 16px;
+	width: 70%;
+	margin: 0 auto;
+}
+
+.line {
+	display: block;
+	text-align: center;
+	overflow: hidden;
+	white-space: nowrap;
+	width: 90%;
+	margin: 15px auto 0;
+	opacity: 0.8;
+}
+
+.line > span {
+	position: relative;
+	display: inline-block;
+}
+
+.line > span:before,
+.line > span:after {
+	content: "";
+	position: absolute;
+	top: 50%;
+	width: 9999px;
+	height: 1px;
+	background: rgb(94, 94, 94);
+	opacity: 0.8;
+}
+
+.line > span:before {
+	right: 100%;
+	margin-right: 15px;
+}
+
+.line > span:after {
+	left: 100%;
+	margin-left: 15px;
+}
+
+.create {
+	text-align: center;
+	display: block;
+	margin: 15px auto 0;
+}
+
+.container > .create > a{
+	text-decoration: none;
+	color: #11C692;
+}
+
+.uidInfo {
+	background-color: white;
+	margin: 15px 0;
+	padding: 30px 20px;
+	vertical-align: middle;
+}
+
+.uidInfo > input[type=password] {
+	border: 1px solid white;
+	margin: 0;
+	font-size: 20px;
+	background-color: white;
+	padding: 0;
+	width: 40%;
+}
+
+.uidInfo > button {
+	width: 18%;
+	padding: 15px 0;
+	top: 50%;
+	background-color: #ddd;
+	color: #1d3e6e;
+	transform: translateY(-50%);
+	float: right;
+}
+
+.logout {
+	margin-top: 15px;
+	border: none;
+	padding: 16px;
+}
+
+.container-acc {
+	width: 55%;
+	margin: 0 auto;
+}
+
+.container-change {
+	width: 55%;
+	padding: 16px;
+	margin: 0 auto;
+}
+
+.container > .error {
+	text-align: center;
+	font-size: 20px;
+}
+
+.container > .error > p {
+	margin: 5px 0 0;
+	padding-bottom: 0;
+}
+
+.uidInfo > button {
+	margin-top: 10px;
+	font-size: 15px;
+}
+
+.cancelChange {
+	display: block;
+}
+
+.cancelChange > .change {
+	background-color: #1d3e6e;
+	float: right;
+}
+
+.shop-links {
+	flex-direction: column;
+	margin-top: 25px;
+}
+
+.shop-links > .wrapper > .filter {
+	width: 100%;
+	height: 10%;
+	display: flex;
+	flex-wrap: wrap;
+	margin: 5px auto;
+}
+
+.shop-links > .wrapper > .filter > form {
+	margin: 5px auto;
+	width: 60%;
+}
+
+.shop-links > .wrapper > .shop-container {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	margin: 5px auto;
+}
+
+.shop-links > .wrapper > .shop-container > form {
+	width: 30%;
+	text-decoration: none;
+	margin: 5px auto;
+	padding: 0;
+	background-color: white;
+}
+
+.shop-links > .wrapper > .shop-container > form > div {
+	height: 235px;
+	margin: 5px;
+	background-image: url();
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.shop-links > .wrapper > .shop-container > form > input {
+	color: #1d3e6e;
+	padding: 0 !important;
+	background-color: white;
+}
+
+.shop-links > .wrapper > .shop-container > form > button {
+	font-size: 15px;
+	margin: 0 auto;
+}
+
+.shop-links > .wrapper > .shop-container > form > input, button {
+	font-size: 20px;
+	border: none;
+	width: 100%;
+}
+
+.shop-links > .wrapper > .shop-container > form > .outOfStock {
+	background-color: grey;
+}
+
+.shop-links > .wrapper > .shop-container > form > .outOfStock:hover {
+	opacity: 1;
+	cursor: default;
+}
+
+.shop-links > .wrapper {
+	width: 70%;
+	margin: 0 auto;
+}
+
+.shop-links > .wrapper > .shop-upload {
+	width: 80%;
+	border: 2px solid #1d3e6e;
+	margin: 20px auto;
+	background-color: white;
+}
+
+.shop-links > .wrapper > .shop-upload > form {
+	font-size: 20px;
+	width: 80%;
+	border: none;
+	margin: 0 auto;
+	background-color: white;
+}
+
+.shop-links > .wrapper > .shop-upload > form > input {
+	background-color: #f2f2f2;
+}
+
+.shop-links > .wrapper > .shop-upload > form > input, .shop-links > .wrapper > .shop-upload > form > button {
+	margin: 15px 0 0;
+	border: 1px solid #1d3e6e;
+}
+
+.shop-links > .wrapper > .shop-upload > form > button {
+	margin: 15px 1px 20px;
+}
+
+.shop-links > .wrapper > .shop-upload > form > input[type=file] {
+	border: none;
+	background-color: white;
+}
+
+.upload, .addToCart, .createAcc, .checkout {
+	background-color: #11C692;
+}
+
+.container > .logout > button {
+	font-size: 15px;
+}
+
+.prodInfo {
+	background-color: white;
+}
+
+form .searchBox {
+	width: 60% !important;
+}
+
+.shop-links > .wrapper > .filter > .searchBox  {
+	display: flex;
+	align-items: center;
+}
+
+.shop-links > .wrapper > .filter > .searchBox > input {
+	width: 70%;
+	padding-right: 0;
+	border: none;
+	margin: 0;
+}
+
+.shop-links > .wrapper > .filter > .searchBox > button {
+	font-size: 15px;
+	width: 20%;
+	border: none;
+	padding: 0;
+	height: 35px;
+	margin: 0;
+	background-color: #11C692;
+}
+
+.tabs {
+	width: 65%;
+	margin: 20px auto;
+	text-align: center;
+	display: flex;
+	justify-content: space-around;
+}
+
+.tabs a {
+	text-decoration: none;
+	padding: 10px 16px;
+	background-color: white;
+	color: #464646;
+	width: 28%;
+}
+
+.admin-prod {
+	width: 80%;
+	margin: 28px auto;
+	display: flex;
+	justify-content: space-around;
+}
+
+.admin-prod table {
+	width: 100%;
+}
+
+.admin-prod notable {
+	background-color: white;
+	border: 2px solid #1d3e6e;
+	width: 100%;
+	text-align: center;
+	border-collapse: collapse;
+}
+
+th {
+	font-weight: 900;
+}
+
+th, td {
+	text-align: left;
+	background-color: white;
+	padding: 8px;
+}
