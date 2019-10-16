@@ -71,6 +71,10 @@ button:hover {
 	float: left;
 }
 
+.tabs > a:hover {
+	opacity: 0.8;
+}
+
 .logpage {
 	float: right;
 }
@@ -149,7 +153,7 @@ button:hover {
 	padding: 15px 0;
 	top: 50%;
 	background-color: #ddd;
-	color: #1d3e6e;
+	color: #464646;
 	transform: translateY(-50%);
 	float: right;
 }
@@ -200,6 +204,36 @@ button:hover {
 	margin-top: 25px;
 }
 
+
+
+.cartainer {
+	width: 70%;
+	margin: 20px auto;
+}
+
+.cartotal {
+	text-align: center;
+	font-size: 25px;
+}
+
+.cartainer > form {
+	border: none;
+}
+
+.cartainer > .wrapper > form > .prodInfo > input {
+	width: 150px;
+}
+
+.cartainer > .wrapper > form > .prodInfo > div {
+	width: 100%;
+	display: flex;
+}
+
+.cartainer > .wrapper > form > .prodInfo > div > button {
+	border: 1px solid white;
+	margin: 0 auto;
+}
+
 .shop-links > .wrapper > .filter {
 	width: 100%;
 	height: 10%;
@@ -238,8 +272,9 @@ button:hover {
 }
 
 .shop-links > .wrapper > .shop-container > form > input {
-	color: #1d3e6e;
+	color: #464646;
 	padding: 0 !important;
+	margin: 6px auto;
 	background-color: white;
 }
 
@@ -270,7 +305,7 @@ button:hover {
 
 .shop-links > .wrapper > .shop-upload {
 	width: 80%;
-	border: 2px solid #1d3e6e;
+	padding: 20px 0;
 	margin: 20px auto;
 	background-color: white;
 }
@@ -285,11 +320,11 @@ button:hover {
 
 .shop-links > .wrapper > .shop-upload > form > input {
 	background-color: #f2f2f2;
+	width: 100%;
 }
 
 .shop-links > .wrapper > .shop-upload > form > input, .shop-links > .wrapper > .shop-upload > form > button {
 	margin: 15px 0 0;
-	border: 1px solid #1d3e6e;
 }
 
 .shop-links > .wrapper > .shop-upload > form > button {
@@ -349,9 +384,9 @@ form .searchBox {
 
 .tabs a {
 	text-decoration: none;
-	padding: 10px 16px;
-	background-color: white;
-	color: #464646;
+	padding: 15px 16px;
+	background-color: #11C692;
+	color: white;
 	width: 28%;
 }
 
@@ -366,19 +401,16 @@ form .searchBox {
 	width: 100%;
 }
 
-.admin-prod notable {
-	background-color: white;
-	border: 2px solid #1d3e6e;
-	width: 100%;
-	text-align: center;
-	border-collapse: collapse;
-}
-
 th {
-	font-weight: 900;
+	font-size: 18px;
+	text-align: left;
+	background-color: white;
+	padding: 10px 8px;
+	color: #464646;
 }
 
-th, td {
+td {
+	font-size: 14px;
 	text-align: left;
 	background-color: white;
 	padding: 8px;
