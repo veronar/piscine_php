@@ -9,14 +9,14 @@
 			width: 200px;
 			background-color: red;
 			border-radius: 50%;
-			top: 30%;
-			left: 30%;
+			margin-left: auto;
+			margin-right: auto;
 		}
 	</style>
 	
 	<script>
 		
-		var colArr = ["red", "green", "blue"];
+		var colArr = ['rgb(255, 0, 0)', 'rgb(0, 255, 0)', 'rgb(0, 0, 255)'];
 
 		function shrinkme() {
 			var ballon = document.getElementById('balloon');
@@ -33,23 +33,21 @@
 			console.log(width);
 			
 			if (width < 200) {
-				console.log("smallest");
+				console.log("grow me");
 				reset();
 			} else {
 				ballon.style.width = width + 'px';
 				ballon.style.height = height + 'px';
 			}
 			
-			while (index >= 0) {
-				if (color == colArr[index]) {
-					if (index == 0)
+			for (var i = 2; i >= 0; i--) {
+				if (color == colArr[i]) {
+					if (i == 0)
 						ballon.style.backgroundColor = colArr[2];
 					else
-						ballon.style.backgroundColor = colArr[index - 1];
-					break;
-					}
-				else 
-					index--;
+						ballon.style.backgroundColor = colArr[i - 1];
+					break ;
+				}
 			}
 		}
 	
@@ -62,8 +60,6 @@
 
 			width += 10;
 			height += 10;
-
-			console.log(width);
 			
 			if (width > 420) {
 				console.log("shrink me");
@@ -79,10 +75,8 @@
 						ballon.style.backgroundColor = colArr[0];
 					else
 						ballon.style.backgroundColor = colArr[i + 1];
-					break;
-					}
-				else
-					i++;
+					break ;
+				}
 			}
 		}
 
