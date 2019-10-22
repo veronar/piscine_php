@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<style>
+		#balloon {
+			position: absolute;
+			height: 200px;
+			width: 200px;
+			background-color: red;
+			border-radius: 50%;
+			top: 30%;
+			left: 30%;
+		}
+	</style>
+	
+	<script>
+		
+		var colArr = ["red", "green", "blue"];
+
+		function shrinkme() {
+			var ballon = document.getElementById('balloon');
+			var position = ballon.getBoundingClientRect();
+			var width = position.width;
+			var height = position.height;
+			var color = window.getComputedStyle(ballon).getPropertyValue("background-color");
+
+			var index = 2;
+			
+			width -= 5;
+			height -= 5;
+
+			console.log(width);
+			
+			if (width < 200) {
+				console.log("smallest");
+				reset();
+			} else {
+				ballon.style.width = width + 'px';
+				ballon.style.height = height + 'px';
+			}
+			
+			while (index >= 0) {
+				if (color == colArr[index]) {
+					if (index == 0)
+						ballon.style.backgroundColor = colArr[2];
+					else
+						ballon.style.backgroundColor = colArr[index - 1];
+					break;
+					}
+				else 
+					index--;
+			}
+		}
+	
+		function growme() {
+			var ballon = document.getElementById('balloon');
+			var position = ballon.getBoundingClientRect();
+			var width = position.width;
+			var height = position.height;
+			var color = window.getComputedStyle(ballon).getPropertyValue("background-color");
+
+			width += 10;
+			height += 10;
+
+			console.log(width);
+			
+			if (width > 420) {
+				console.log("shrink me");
+				reset();
+			} else {
+				ballon.style.width = width + 'px';
+				ballon.style.height = height + 'px';
+			}
+
+			for (var i = 0; i <= 2; i++) {
+				if (color == colArr[i]) {
+					if (i == 2)
+						ballon.style.backgroundColor = colArr[0];
+					else
+						ballon.style.backgroundColor = colArr[i + 1];
+					break;
+					}
+				else
+					i++;
+			}
+		}
+
+		function reset() {
+			document.getElementById("balloon").style.width = '200px';
+			document.getElementById("balloon").style.height = '200px';
+		}
+	</script>
+
+</head>
+<body>
+
+	<div id="balloon" onclick="growme()" onmouseleave="shrinkme()"></div>
+
+</body>
+</html>
