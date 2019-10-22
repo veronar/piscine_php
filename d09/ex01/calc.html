@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		
+		<style>
+			h1 {
+				margin-top: 30px;
+				text-align: center;
+			}
+			.class {
+				margin-top: 100px;
+				display: flex;
+				justify-content: center;
+			}
+
+			body {
+				background-color: lightblue;;
+			}
+			
+		</style>
+
+		<script>
+
+			window.onload = function() {
+			setTimeout(function(){ alert("Please, use me..."); }, 30000);}
+			//setInterval("alert('Please, use me...')", 30000)};
+
+			function isInt(val) {
+				var x = parseInt(val, 10);
+				return (!isNaN(x) && val == x && x.toString() == val.toString());
+			}
+
+			function result(value) {
+				console.log(value);
+				alert(value);
+			}
+
+			function calc(form) {
+				var op = form.elements["op"].value;
+				var val1 = form.elements["val1"].value;
+				var val2 = form.elements["val2"].value;
+
+				if (!isInt(val1) || !isInt(val2)){
+					alert("Error :(");
+					return false;
+				}
+				else {
+					val1 = parseInt(val1, 10);
+					val2 = parseInt(val2, 10);
+					
+					if (val1 < 0 || val2 < 0) {
+						alert("Error :(");
+						return false;
+					}
+
+					switch (op) {
+						case ("+"):
+							result(val1 + val2);
+							break ;
+						case ("-"):
+							result(val1 - val2);
+							break ;
+						case ("*"):
+							result(val1 * val2);
+							break ;
+						case ("/"):
+							if (val2 == 0)
+								result("It’s over 9000!");
+							else
+								result(val1 / val2);
+							break ;
+						case ("%"):
+							if (val2 == 0)
+								result("It’s over 9000!");
+							else
+								result(val1 / val2);
+							break ;
+					}
+				}
+
+			}
+
+			
+		</script>
+
+		<h1>I'm a Calculator :)</h1>
+
+	</head>
+	
+	<body>
+		<div>
+			<form class="class" id="calc" onsubmit="calc(this)" action="">
+				<input id="val1" type="text">
+				<select name="op">
+					<option value="+">+</option>
+					<option value="-">-</option>
+					<option value="*">*</option>
+					<option value="/">/</option>
+					<option value="%">%</option>
+				</select>
+				<input id="val2" type="text">
+				<input type="submit" value="Try me!">
+			</form>
+
+		</div>
+	</body>
+</html>
