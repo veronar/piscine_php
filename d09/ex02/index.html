@@ -4,14 +4,28 @@
 	<meta charset="UTF-8">
 	
 	<style>
+		
+		body {
+			background-repeat: no-repeat;
+			font-family: sans-serif;
+		}
+
+		div > button {
+			width: 100%;
+			margin-top: 10px;
+			padding: 15px 0;
+			border-radius: 10px;
+		}
+
 		body > div {
-			display: flex;
-			width: 100%vw;
-			height: 100%vw;
+			display: block;
+			width: 40%;
+			margin: 0 auto;
 		}
 
 		.elems {
-			background-color: lightcoral;
+			background-color: lightblue;
+			border-radius: 10px;
 			padding: 15px;
 			margin: 5px;
 			display: flex;
@@ -22,7 +36,7 @@
 	<script type="text/javascript" src="todo.js"></script>
 
 </head>
-<body>
+<body background="http://hdwpro.com/wp-content/uploads/2017/03/Art-Background-Image.png">
 	<div id="ft_list">
 
 		<!--to do must in their own divs
@@ -43,7 +57,9 @@
 		if elemnts on list, must be saved to open that list on next start up-->
 
 	</div>
-	<button name="New" onclick="addnew(this)">New</button>
+	<div>
+		<button name="New" onclick="addnew(this)">New</button>
+	</div>
 	
 
 </body>
