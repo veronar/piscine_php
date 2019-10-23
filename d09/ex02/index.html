@@ -2,15 +2,25 @@
 <html>
 <head>
 	<meta charset="UTF-8">
+	
 	<style>
+		div {
+			display: flex;
+			width: 100%vw;
+			height: 100%vw;
+		}
+
+		.elems {
+			background-color: lightcoral;
+		}
 
 	</style>
-	<script src="todo.js">
-	</script>
+	<script type="text/javascript" src="todo.js"></script>
 
 </head>
 <body>
 	<div id="ft_list">
+
 		<!--to do must in their own divs
 		when todo creat - move to top of list
 		look at DOM manipulation
@@ -29,6 +39,7 @@
 		if elemnts on list, must be saved to open that list on next start up-->
 
 	</div>
+	<button name="New" onclick="addnew(this)">New</button>
 	
 
 </body>

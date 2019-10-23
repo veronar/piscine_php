@@ -2,13 +2,17 @@
 <html>
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,intial-scale=1.0">
+
+	<title>To do List</title>
+
 	<style>
 		#balloon {
-			position: absolute;
 			height: 200px;
 			width: 200px;
 			background-color: red;
 			border-radius: 50%;
+			display: flex;
 			margin-left: auto;
 			margin-right: auto;
 		}
@@ -16,7 +20,7 @@
 	
 	<script>
 		
-		var colArr = ['rgb(255, 0, 0)', 'rgb(0, 255, 0)', 'rgb(0, 0, 255)'];
+		var colArr = ['rgb(255, 0, 0)', 'rgb(0, 128, 0)', 'rgb(0, 0, 255)'];
 
 		function shrinkme() {
 			var ballon = document.getElementById('balloon');
@@ -34,6 +38,7 @@
 			
 			if (width < 200) {
 				console.log("grow me");
+				ballon.style.backgroundColor = colArr[0];
 				reset();
 			} else {
 				ballon.style.width = width + 'px';
@@ -83,6 +88,7 @@
 		function reset() {
 			document.getElementById("balloon").style.width = '200px';
 			document.getElementById("balloon").style.height = '200px';
+			ballon.style.backgroundColor = colArr[0];
 		}
 	</script>
 
