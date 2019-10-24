@@ -1,56 +1,48 @@
-var tab = [];
-var index = 0;
-var flag = 0;
 
-function addnew(elem) {
+var iscookie = [];
+var ft_list;
+
+window.onload = function () {
+	document.querySelector("#new").addEventListener("click", addnew);
+	ft_list = document.getElementById("ft_list");
+	var temp = document.cookie;
+	if (temp) {
+		iscookie = JSON.parse(temp);
+		iscookie.forEach(function (e) {
+			addTodo(e);
+		});
+	}
+};
+
+window.onunload = function () {
+	var todo = ft_list.children;
+	var newcookie = [];
+	for (var i = 0; i < todo.length; i++)
+		newcookie.unshift(todo[i].innerHTML);
+	document.cookie = JSON.stringify(newcookie);
+};
+
+function addnew() {
 	
 	var todo = prompt("What would you like to add?");
 
-	if (!todo) {
-		alert("Error :(");
-		return false;
+	if (todo != '') {
+		addTodo(todo);
 	}
+}
 
-	if (todo) {
-		
-		var list = document.getElementById('ft_list');
-		var firstElem = list.firstChild;
+function addTodo(todo){
+    var newtem = document.createElement("div");
+	newtem.innerHTML = todo;
+	
+	newtem.setAttribute("class", "elems");
+	newtem.setAttribute("onclick", "del(this)");
 
-		var newitem = document.createElement("div");
-		newitem.setAttribute("class", "elems");
-		newitem.setAttribute("onclick", "del(this)");
-		newitem.setAttribute("index", index);
-
-		var textnode = document.createTextNode(todo);
-		tab[index] = todo;
-		index++;
-		newitem.appendChild(textnode);
-		list.insertBefore(newitem, list.childNodes[0]);
-	}
+    ft_list.insertBefore(newtem, ft_list.firstChild);
 }
 
 function del(elem) {
 	if (confirm("Are you sure you would like to delete this entry?") == true) {
-		var i = elem.getAttribute("index");
-		tab.splice(i, 1);
-		elem.parentNode.removeChild(elem);
-		update_cookies();
-	}
-}
-
-function update_cookies() {
-	var newcookie = JSON.stringify(tab);
-	document.cookie = "todos="+newcookie;
-}
-
-window.onload = function() {
-	if (document.cookie) {
-		flag = 1;
-		var iscookie = document.cookie;
-		var newtab = iscookie.split("=");
-		var test = JSON.parse(newtab[1]);
-		for (elem in test)
-			add_new(test[elem]);
-		flag = 0;
+		ft_list.removeChild(elem);
 	}
 }

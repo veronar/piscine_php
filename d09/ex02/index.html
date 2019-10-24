@@ -2,8 +2,12 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	
+	<script src="todo.js"></script>
 	<style>
+		h1 {
+			color: white;
+			text-align: center;
+		}
 		
 		body {
 			background-repeat: no-repeat;
@@ -14,7 +18,7 @@
 			width: 100%;
 			margin-top: 10px;
 			padding: 15px 0;
-			border-radius: 10px;
+			border-radius: 2px;
 		}
 
 		body > div {
@@ -24,8 +28,9 @@
 		}
 
 		.elems {
-			background-color: lightblue;
-			border-radius: 10px;
+			background-color: #024B90;
+			color: whitesmoke;
+			border-radius: 2px;
 			padding: 15px;
 			margin: 5px;
 			display: flex;
@@ -33,33 +38,22 @@
 		}
 		
 	</style>
-	<script type="text/javascript" src="todo.js"></script>
+	
 
 </head>
 <body background="http://hdwpro.com/wp-content/uploads/2017/03/Art-Background-Image.png">
+
+	<h1>To Do list</h1>
 	<div id="ft_list">
 
-		<!--to do must in their own divs
-		when todo creat - move to top of list
-		look at DOM manipulation
-	
-		creation button name="new"
-		onclick opens prompt text window to create new todo
-		must not be empty
-		appear top of list
-		
-		remove todo
-		just click on it
-		confirmation window to remove it
-		remove from DOM - not just hidden
-	
-		list saved as a cookie?
-		if elemnts on list, must be saved to open that list on next start up-->
+		<!-- list items go here -->
 
 	</div>
 	<div>
-		<button name="New" onclick="addnew(this)">New</button>
+		<button id="new" name="New">New</button>
 	</div>
+
+	
 	
 
 </body>
