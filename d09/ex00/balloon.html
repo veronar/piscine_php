@@ -7,14 +7,18 @@
 	<title>Come blow this balloon</title>
 
 	<style>
+		.container {
+			display: flex;
+			height: 100vh;
+			width: 100vw;
+		}
+
 		#balloon {
 			height: 200px;
 			width: 200px;
 			background-color: red;
 			border-radius: 50%;
-			display: flex;
-			margin-left: auto;
-			margin-right: auto;
+			margin: auto;
 		}
 	</style>
 	
@@ -94,8 +98,9 @@
 
 </head>
 <body>
-
+<div class="container">
 	<div id="balloon" onclick="growme()" onmouseleave="shrinkme()"></div>
+</div>
 
 </body>
 </html>

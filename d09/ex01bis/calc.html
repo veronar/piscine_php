@@ -2,8 +2,10 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
+		<title>Calculator :)</title>
 		
 		<style>
+
 			input {
 				border-radius: 3px;
 				padding: 5px 10px;
@@ -38,13 +40,19 @@
 			
 		</style>
 
+		<script
+			src="https://code.jquery.com/jquery-3.4.1.js"
+			integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  			crossorigin="anonymous"></script>
+
 	</head>
 	
 	<body background="https://wallpaperplay.com/walls/full/1/7/b/155449.jpg">
+
 		<div class="container">
-			<form class="class" id="calc" onsubmit="calc(this)" action="">
+			<form class="class" id="calc" action="">
 				<input id="val1" type="text">
-				<select name="op">
+				<select name="op" id="op">
 					<option value="+">+</option>
 					<option value="-">-</option>
 					<option value="*">*</option>
@@ -52,71 +60,78 @@
 					<option value="%">%</option>
 				</select>
 				<input id="val2" type="text">
-				<input type="submit" value="Try me!">
+				<input id="button" type="submit" value="Try me!">
 			</form>
 
 		</div>
 
 		<script>
 
-			window.onload = function() {
-			setTimeout(function(){ alert("Please, use me..."); }, 30000);}
+			var val1;
+			var val2;
+			var op;
+			var form;
 
+			$(document).ready(function(){
+        	    form = $('#calc');	
+           		val1 = $('#val1');
+        	    val2 = $('#val2');
+        	    op = $('#op');
+				form.submit(calc);
+         		setInterval("alert('Please, use me...')", 30000);
+       		});
+	
+			function result(value) {
+				console.log(value);
+				alert(value);
+			}
+
+			function calc(event) {
+				event.preventDefault();
+				
+				var first = Number(val1.val());
+				var second = Number(val2.val()); 
+
+				 if (!isInt(first) || !isInt(second)){
+					alert("Error :(");
+				 	return false;
+				 }
+					
+					if (first < 0 || second < 0) {
+						alert("Error :(");
+						return false;
+					}
+
+					switch (op.val()) {
+						case ("+"):
+							result(first + second);
+							break ;
+						case ("-"):
+							result(first - second);
+							break ;
+						case ("*"):
+							result(first * second);
+							break ;
+						case ("/"):
+							if (second == 0)
+								result("It’s over 9000!");
+							else
+								result(first / second);
+							break ;
+						case ("%"):
+							if (second == 0)
+								result("It’s over 9000!");
+							else
+								result(first / second);
+							break ;
+					}
+				}
 
 			function isInt(val) {
 				var x = parseInt(val, 10);
 				return (!isNaN(x) && val == x && x.toString() == val.toString());
 			}
 
-			function result(value) {
-				console.log(value);
-				alert(value);
-			}
-
-			function calc(form) {
-				var op = form.elements["op"].value;
-				var val1 = form.elements["val1"].value;
-				var val2 = form.elements["val2"].value;
-
-				if (!isInt(val1) || !isInt(val2)){
-					alert("Error :(");
-					return false;
-				}
-				else {
-					val1 = parseInt(val1, 10);
-					val2 = parseInt(val2, 10);
-					
-					if (val1 < 0 || val2 < 0) {
-						alert("Error :(");
-						return false;
-					}
-
-					switch (op) {
-						case ("+"):
-							result(val1 + val2);
-							break ;
-						case ("-"):
-							result(val1 - val2);
-							break ;
-						case ("*"):
-							result(val1 * val2);
-							break ;
-						case ("/"):
-							if (val2 == 0)
-								result("It’s over 9000!");
-							else
-								result(val1 / val2);
-							break ;
-						case ("%"):
-							if (val2 == 0)
-								result("It’s over 9000!");
-							else
-								result(val1 / val2);
-							break ;
-					}
-				}
-
-			}
 		</script>
 
 	</body>

@@ -2,31 +2,37 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width,intial-scale=1.0">
+	<meta name="viewport" content="width=device-width, intial-scale=1.0">
 
 	<title>Come blow this balloon</title>
 
 	<style>
+		.container {
+			display: flex;
+			height: 100vh;
+			width: 100vw;
+		}
+
 		#balloon {
 			height: 200px;
 			width: 200px;
 			background-color: red;
 			border-radius: 50%;
-			display: flex;
-			margin-left: auto;
-			margin-right: auto;
+			margin: auto;
 		}
 	</style>
 
 	<script
-		src="https://code.jquery.com/jquery-3.4.1.js"></script>
-	
+		src="https://code.jquery.com/jquery-3.4.1.js"
+		integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  		crossorigin="anonymous"></script>
 	
 
 </head>
 <body>
-
-	<div id="balloon"></div>
+	<div class="container">
+		<div id="balloon"></div>
+	</div>
 
 	<script>
 		
@@ -47,10 +53,7 @@
 				width -= 5;
 				height -= 5;
 	
-				console.log(width);
-				
 				if (width < 200) {
-					console.log("grow me");
 					ballon.style.backgroundColor = colArr[0];
 					reset();
 				} else {
@@ -80,7 +83,6 @@
 				height += 10;
 				
 				if (width > 420) {
-					console.log("shrink me");
 					reset();
 				} else {
 					ballon.style.width = width + 'px';
