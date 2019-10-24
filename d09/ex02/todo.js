@@ -6,7 +6,7 @@ window.onload = function () {
 	document.querySelector("#new").addEventListener("click", addnew);
 	ft_list = document.getElementById("ft_list");
 	var temp = document.cookie;
-	if (temp) {
+	if (temp && temp != '') {
 		iscookie = JSON.parse(temp);
 		iscookie.forEach(function (e) {
 			addTodo(e);
@@ -26,7 +26,7 @@ function addnew() {
 	
 	var todo = prompt("What would you like to add?");
 
-	if (todo != '') {
+	if (todo) {
 		addTodo(todo);
 	}
 }
