@@ -33,7 +33,7 @@ function addTodo(todo){
 	ft_list.prepend($('<div class="elems">' + todo + '</div>').click(del));
 }
 
-function del(elem) {
+function del() {
 	if (confirm("Are you sure you would like to delete this entry?") == true) {
 		this.remove();
 	}
